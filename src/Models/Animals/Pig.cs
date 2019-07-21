@@ -20,6 +20,7 @@ namespace Trestlebridge.Models.Animals
 
         public double GrassPerDay { get; set; } = 5.4;
         public string Type { get; } = "Pig";
+        public string TypeOfAnimal { get; } = "grazing";
 
         // Methods
         public void Graze()
