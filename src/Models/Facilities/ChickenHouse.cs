@@ -18,7 +18,8 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IChicken animal) {
             // TODO: implement this...
-            throw new NotImplementedException ();
+            _animals.Add (animal);
+           // throw new NotImplementedException ();
         }
 
         public void AddResource (List<IChicken> animals) {
