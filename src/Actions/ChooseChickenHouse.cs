@@ -16,8 +16,7 @@ namespace Trestlebridge.Actions
             {
                 Console.WriteLine($"{i + 1}. Chicken");
             }
-            Console.WriteLine("2. Chicken House");
-
+          
             Console.WriteLine();
 
             // How can I output the type of animal chosen here?
