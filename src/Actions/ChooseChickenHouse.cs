@@ -23,10 +23,11 @@ namespace Trestlebridge.Actions
             Console.WriteLine($"Place the {animal.Type}(s) where?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine());
+            int choice = Int32.Parse(Console.ReadLine()) -1;
 
 
-            //farm.Chickenhouses[choice].AddResource(animal);
+            //Hughes told this first
+            farm.ChickenHouses[choice].AddResource(animal);
 
             /*
                 Couldn't get this to work. Can you?
