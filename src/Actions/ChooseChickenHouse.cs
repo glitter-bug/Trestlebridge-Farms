@@ -6,17 +6,17 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Actions
 {
-    public class ChooseGrazingField
+    public class ChooseChickenHouse
     {
-        public static void CollectInput(Farm farm, IGrazing animal)
+        public static void CollectInput(Farm farm, IChicken animal)
         {
             Console.Clear();
 
-            for (int i = 0; i < farm.GrazingFields.Count; i++)
+            for (int i = 0; i < farm.ChickenHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Grazing Field");
+                Console.WriteLine($"{i + 1}. Chicken House");
             }
-
+          
             Console.WriteLine();
 
             // How can I output the type of animal chosen here?
@@ -26,7 +26,7 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
 
-            //farm.GrazingFields[choice].AddResource(animal);
+            //farm.Chickenhouses[choice].AddResource(animal);
 
             /*
                 Couldn't get this to work. Can you?

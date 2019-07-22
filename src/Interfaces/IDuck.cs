@@ -1,9 +1,9 @@
 namespace Trestlebridge.Interfaces
 {
-    public interface IGrazing
+    public interface IDuck
     {
         double GrassPerDay { get; set; }
         string Type { get; }
-        void Graze();
+        //void Graze ();
     }
 }
