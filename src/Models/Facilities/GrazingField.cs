@@ -5,7 +5,7 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Facilities {
     public class GrazingField : IFacility<IGrazing> {
-        private int _capacity = 50;
+        private int _capacity = 20;
         private Guid _id = Guid.NewGuid ();
 
         private List<IGrazing> _animals = new List<IGrazing> ();
@@ -17,8 +17,15 @@ namespace Trestlebridge.Models.Facilities {
         }
 
         public void AddResource (IGrazing animal) {
-            _animals.Add (animal);
-            //throw new NotImplementedException ();
+            if(_animals.Count < Capacity)
+            {
+                _animals.Add (animal);
+            }
+            else
+            {
+                System.Console.WriteLine("The facility is at maximum capacity.");
+                Console.ReadLine();
+            }
         }
 
         public void AddResource (List<IGrazing> animals) {
