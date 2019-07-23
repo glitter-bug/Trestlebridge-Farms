@@ -14,8 +14,8 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.DuckHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Duck House");
-            }       
+                Console.WriteLine($"{i + 1}. Duck House has ({farm.DuckHouses[i].animalCount}/{farm.DuckHouses[i].Capacity})");
+            }
 
             Console.WriteLine();
 
@@ -23,7 +23,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine($"Place the {animal.Type}(s) where?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine()) -1;
+            int choice = Int32.Parse(Console.ReadLine()) - 1;
 
 
             farm.DuckHouses[choice].AddResource(animal);

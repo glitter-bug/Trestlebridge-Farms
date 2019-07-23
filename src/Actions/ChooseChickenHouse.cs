@@ -14,16 +14,16 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.ChickenHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Chicken House");
+                Console.WriteLine($"{i + 1} Chicken House has ({farm.ChickenHouses[i].animalCount}/{farm.ChickenHouses[i].Capacity})");
             }
-          
+
             Console.WriteLine();
 
             // How can I output the type of animal chosen here?
             Console.WriteLine($"Place the {animal.Type}(s) where?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine()) -1;
+            int choice = Int32.Parse(Console.ReadLine()) - 1;
 
 
             //Hughes told this first
