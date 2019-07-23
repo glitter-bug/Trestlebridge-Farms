@@ -38,7 +38,7 @@ namespace Trestlebridge.Actions {
                     break;
                 case 4:
                     farm.AddPlowedField (new PlowedField ());
-                    Console.WriteLine ("You created a new Grazing farm!");
+                    Console.WriteLine ("You created a new Plowed Field!");
                     Console.WriteLine ("Press Enter to go to the main Menu");
                     Console.ReadLine ();
                     break;
