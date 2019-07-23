@@ -15,6 +15,9 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < farm.ChickenHouses.Count; i++)
             {
                 Console.WriteLine($"{i + 1} Chicken House has ({farm.ChickenHouses[i].animalCount}/{farm.ChickenHouses[i].Capacity})");
+                System.Console.WriteLine();
+                farm.GrazingFields[i].GroupedAnimals();
+                System.Console.WriteLine();
             }
 
             Console.WriteLine();
