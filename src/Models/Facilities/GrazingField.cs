@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Trestlebridge.Interfaces;
 
@@ -22,6 +23,16 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
+        public void GroupedAnimals()
+        {
+            var collection = _animals.GroupBy(
+                animal => animal.Type
+            );
+            foreach (var animal in collection)
+            {
+                System.Console.WriteLine($"{animal.Count()} {animal.Key}(s)");
+            }
+        }
         public void AddResource(IGrazing animal)
         {
             if (_animals.Count < Capacity)
