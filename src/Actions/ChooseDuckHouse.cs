@@ -16,7 +16,7 @@ namespace Trestlebridge.Actions
             {
                 Console.WriteLine($"{i + 1}. Duck House has ({farm.DuckHouses[i].animalCount}/{farm.DuckHouses[i].Capacity})");
                 System.Console.WriteLine();
-                farm.GrazingFields[i].GroupedAnimals();
+                farm.DuckHouses[i].GroupedAnimals();
                 System.Console.WriteLine();
             }
 
