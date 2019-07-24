@@ -27,7 +27,7 @@ namespace Trestlebridge.Actions {
                     break;
 
                 case 3:
-                    ChoosePlowedField.CollectInput (farm, new Wildflower ());
+                    ChooseNaturalField.CollectInput (farm, new Wildflower ());
                     break;
 
             }

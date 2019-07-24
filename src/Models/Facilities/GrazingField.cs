@@ -13,7 +13,6 @@ namespace Trestlebridge.Models.Facilities
 
         private List<IGrazing> _animals = new List<IGrazing>();
 
-
         public double animalCount { get { return _animals.Count; } }
         public double Capacity
         {
