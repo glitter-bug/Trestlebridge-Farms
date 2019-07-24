@@ -13,6 +13,8 @@ namespace Trestlebridge.Models
         public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<NaturalFields> NaturalFields { get; } = new List<NaturalFields>();
 
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+
         /*
             This method must specify the correct product interface of the
             resource being purchased.
@@ -31,6 +33,7 @@ namespace Trestlebridge.Models
                 case "Duck":
                     DuckHouses[index].AddResource((IDuck)resource);
                     break;
+
             }
         }
 
@@ -46,6 +49,10 @@ namespace Trestlebridge.Models
         public void AddDuckHouse(DuckHouse field)
         {
             DuckHouses.Add(field);
+        }
+        public void AddPlowedField(PlowedField field)
+        {
+            PlowedFields.Add(field);
         }
 
         public void AddNaturalFields(NaturalFields field)
@@ -63,7 +70,10 @@ namespace Trestlebridge.Models
 
             DuckHouses.ForEach(dh => report.Append(dh));
 
+            PlowedFields.ForEach(pf => report.Append(pf));
+
             NaturalFields.ForEach(nf => report.Append(nf));
+
 
             return report.ToString();
         }
