@@ -42,8 +42,10 @@ namespace Trestlebridge.Actions
                     break;
                 case 4:
                     farm.AddPlowedField(new PlowedField());
-                    Console.WriteLine("Yeah created n new Plowed Field");
+                    Console.WriteLine("You created a new Plowed Field");
                     Console.WriteLine("Press Enter to go to the main Menu");
+                    Console.ReadLine();
+                    break;
 
             }
         }
