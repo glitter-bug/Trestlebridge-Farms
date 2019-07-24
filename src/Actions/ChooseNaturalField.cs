@@ -8,14 +8,10 @@ namespace Trestlebridge.Actions
 {
     public class ChooseFieldNatural
     {
-        public static void CollectInput(Farm farm, ISeedProducing seed)
+        public static void CollectInput(Farm farm)
         {
             Console.Clear();
 
-            for (int i = 0; i < farm.NaturalFields.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}.");
-            }
 
             Console.WriteLine();
 
@@ -25,7 +21,7 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine()) - 1;
 
 
-            NaturalFields[choice].AddResource(animal);
+
 
             /*
                 Couldn't get this to work. Can you?
